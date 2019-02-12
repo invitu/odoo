@@ -2726,7 +2726,7 @@ msgstr "Įkainojimas"
 #. module: website_sale
 #: selection:product.attribute,type:0
 msgid "Radio"
-msgstr "Radio"
+msgstr ""
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_product_rating_ids
