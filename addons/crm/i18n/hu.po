@@ -1079,7 +1079,7 @@ msgstr "Csoport tevékenységek jobb átláthatósága"
 #: code:addons/crm/models/crm_lead.py:381
 #, python-format
 msgid "Boom! Team record for the past 30 days."
-msgstr "Bumm! Az elmúlt 30 nap csapatrekordja."
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1159,16 +1159,11 @@ msgid ""
 "Check this box to filter and qualify incoming requests as leads before "
 "converting them into opportunities and assigning them to a salesperson."
 msgstr ""
-"Jelölje be ezt a négyzetet a bejövő kérések szűrése és érdeklődéssé "
-"minősítése érdekében, mielőtt átalakítaná azokat lehetőségekké, és "
-"hozzárendelné azokat egy értékesítőhöz."
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_use_opportunities
 msgid "Check this box to manage a presales process with opportunities."
 msgstr ""
-"Jelölje be ezt a négyzetet egy lehetőségekkel rendelkező, értékesítés előtti"
-" folyamat kezelése érdekében."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_city
@@ -1566,7 +1561,7 @@ msgstr "Hónap létrehozás"
 #. module: crm
 #: model:ir.actions.server,name:crm.action_your_pipeline
 msgid "Crm: My Pipeline"
-msgstr "Crm: Folyamatom"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_company_currency
@@ -2200,8 +2195,6 @@ msgstr "Magas"
 #: model:ir.model.fields,help:crm.field_crm_team_dashboard_graph_group_pipeline
 msgid "How this channel's dashboard graph will group the results."
 msgstr ""
-"A mód, ahogy ezen csatorna kezelőpultjának grafikonja csoportosítani fogja "
-"az eredményeket."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_id
@@ -2643,7 +2636,7 @@ msgstr "Készítsen Árajánlatot"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_config_settings_generate_lead_from_alias
 msgid "Manual Assignation of Emails"
-msgstr "E-mailek kézi hozzárendelése"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
@@ -2653,7 +2646,7 @@ msgstr ""
 #. module: crm
 #: model:ir.actions.server,name:crm.action_mark_activities_done
 msgid "Mark All Activities as Done"
-msgstr "Összes tevékenység megjelölése készként"
+msgstr ""
 
 #. module: crm
 #: model:ir.actions.server,name:crm.action_mark_late_activities_done
@@ -2977,7 +2970,7 @@ msgstr "Szobák száma"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_opportunities_count
 msgid "Number of open opportunities"
-msgstr "Nyitott lehetőségek száma"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3059,12 +3052,12 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Open Opportunities"
-msgstr "Nyitott lehetőségek"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Open Opportunity"
-msgstr "Nyitott lehetőség"
+msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_case_form_view_salesteams_opportunity
@@ -3596,7 +3589,7 @@ msgstr "Értékesítési csatorna"
 #: model:ir.ui.menu,name:crm.crm_team_config
 #: model:ir.ui.menu,name:crm.sales_team_menu_report_crm
 msgid "Sales Channels"
-msgstr "Értékesítési csatornák"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4035,8 +4028,6 @@ msgid ""
 "The email address associated with this channel. New emails received will "
 "automatically create new leads assigned to the channel."
 msgstr ""
-"Az ezen csatornával társított e-mail cím. Az új, bejövő e-mailek "
-"automatikusan új, ezen csatornához rendelt érdeklődéseket fognak létrehozni."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4112,8 +4103,6 @@ msgstr ""
 #: model:ir.model.fields,help:crm.field_crm_team_dashboard_graph_period_pipeline
 msgid "The time period this channel's dashboard graph will consider."
 msgstr ""
-"Az időperiódus, amelyet ezen csatorna kezelőpultjának grafikonja figyelembe "
-"fog venni."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4192,7 +4181,7 @@ msgstr ""
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action_lead
 msgid "This report analyses the source of your leads."
-msgstr "Ez a riport az érdeklődések forrását elemzi."
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_fold
@@ -4291,13 +4280,13 @@ msgstr "Nem hozzárendelt"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Unassigned Lead"
-msgstr "Nem hozzárendelt lehetőség"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_unassigned_leads_count
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Unassigned Leads"
-msgstr "Nem hozzárendelt érdeklődések"
+msgstr ""
 
 #. module: crm
 #: code:addons/crm/models/crm_team.py:211
@@ -4340,7 +4329,7 @@ msgstr "Használja"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "Use an External Email Server"
-msgstr "Használjon külső e-mail kiszolgálót"
+msgstr ""
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner.mass,action:0
@@ -4530,7 +4519,7 @@ msgstr "Weboldal"
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_website
 msgid "Website of the contact"
-msgstr "A kapcsolat weboldala"
+msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4640,7 +4629,7 @@ msgstr "Megnyert a lehetőség célból"
 #: code:addons/crm/models/crm_lead.py:383
 #, python-format
 msgid "Yeah! Deal of the last 7 days for the team."
-msgstr "Igen! A csapat legjobb üzlete az utóbbi hét napban."
+msgstr ""
 
 #. module: crm
 #. openerp-web
@@ -4681,13 +4670,13 @@ msgstr "Meg kell adni egy szűrőt a kiválasztáshoz"
 #: code:addons/crm/models/crm_lead.py:385
 #, python-format
 msgid "You just beat your personal record for the past 30 days."
-msgstr "Éppen most döntötte meg az elmúlt 30 nap személyes rekordját."
+msgstr ""
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:387
 #, python-format
 msgid "You just beat your personal record for the past 7 days."
-msgstr "Éppen most döntötte meg az elmúlt 7 nap személyes rekordját."
+msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_case_form_view_salesteams_opportunity

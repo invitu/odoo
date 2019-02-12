@@ -265,7 +265,7 @@ class AccountFrFec(models.TransientModel):
         for row in self._cr.fetchall():
             listrow = list(row)
             account_id = listrow.pop()
-            w.writerow(listrow)
+            w.writerow([s.encode("utf-8") for s in listrow])
 
         # LINES
         sql_query = '''
