@@ -657,7 +657,13 @@ QUnit.module('account', {
                         position: "before",
                         symbol: "$"
                     }
-                }
+                },
+                user_has_group: function (group) {
+                    if (group === 'analytic.group_analytic_tags' || group === 'analytic.group_analytic_accounting') {
+                        return $.when(true);
+                    }
+                    return this._super.apply(this, arguments);
+                },
             },
         });
         clientAction.appendTo($('#qunit-fixture'));
@@ -1308,8 +1314,12 @@ QUnit.module('account', {
             mockRPC: function (route, args) {
                 if (args.model === 'account.reconcile.model' && args.method === 'search_read') {
                     assert.deepEqual(
-                        args.kwargs.domain,
-                        [['company_id', 'in', [3,4]], ['match_journal_ids', 'in', [false, 1, 2]]],
+                        args.kwargs.domain, [
+                            ['company_id', 'in', [3,4]],
+                            '|',
+                            ['match_journal_ids', '=', false],
+                            ['match_journal_ids', 'in', [1, 2]],
+                        ],
                         'The domain to get reconcile models should contain the right fields and values'
                     );
                 }
@@ -1830,7 +1840,13 @@ QUnit.module('account', {
                         position: "before",
                         symbol: "$"
                     }
-                }
+                },
+                user_has_group: function (group) {
+                    if (group === 'analytic.group_analytic_tags' || group === 'analytic.group_analytic_accounting') {
+                        return $.when(true);
+                    }
+                    return this._super.apply(this, arguments);
+                },
             },
         });
 

@@ -97,15 +97,17 @@ class AccountFiscalPosition(models.Model):
             return False
         base_domain = [('auto_apply', '=', True), ('vat_required', '=', vat_required)]
         if self.env.context.get('force_company'):
-            base_domain.append(('company_id', '=', self.env.context.get('force_company')))
+            base_domain.append(('company_id', 'in', [self.env.context.get('force_company'), False]))
         null_state_dom = state_domain = [('state_ids', '=', False)]
         null_zip_dom = zip_domain = [('zip_from', '=', 0), ('zip_to', '=', 0)]
         null_country_dom = [('country_id', '=', False), ('country_group_id', '=', False)]
 
-        if zipcode and zipcode.isdigit():
+        # DO NOT USE zipcode.isdigit() b/c '4020²' would be true, so we try/except
+        try:
             zipcode = int(zipcode)
-            zip_domain = [('zip_from', '<=', zipcode), ('zip_to', '>=', zipcode)]
-        else:
+            if zipcode != 0:
+                zip_domain = [('zip_from', '<=', zipcode), ('zip_to', '>=', zipcode)]
+        except (ValueError, TypeError):
             zipcode = 0
 
         if state_id:

@@ -302,7 +302,16 @@ class MrpProduction(models.Model):
             wo_done = True
             if any([x.state not in ('done', 'cancel') for x in production.workorder_ids]):
                 wo_done = False
-            production.check_to_done = production.is_locked and done_moves and (qty_produced >= production.product_qty) and (production.state not in ('done', 'cancel')) and wo_done
+            production.check_to_done = (
+                production.is_locked
+                and done_moves
+                and float_compare(
+                    qty_produced, production.product_qty, precision_rounding=production.product_uom_id.rounding
+                )
+                != -1
+                and (production.state not in ("done", "cancel"))
+                and wo_done
+            )
             production.qty_produced = qty_produced
         return True
 
@@ -347,14 +356,14 @@ class MrpProduction(models.Model):
         self.product_uom_id = self.bom_id.product_uom_id.id
         self.picking_type_id = self.bom_id.picking_type_id or self.picking_type_id
 
-    @api.onchange('picking_type_id')
+    @api.onchange('picking_type_id', 'routing_id')
     def onchange_picking_type(self):
         location = self.env.ref('stock.stock_location_stock')
         try:
             location.check_access_rule('read')
         except (AttributeError, AccessError):
             location = self.env['stock.warehouse'].search([('company_id', '=', self.env.user.company_id.id)], limit=1).lot_stock_id
-        self.location_src_id = self.picking_type_id.default_location_src_id.id or location.id
+        self.location_src_id = self.routing_id.location_id.id or self.picking_type_id.default_location_src_id.id or location.id
         self.location_dest_id = self.picking_type_id.default_location_dest_id.id or location.id
 
     @api.multi
@@ -510,11 +519,12 @@ class MrpProduction(models.Model):
         if move:
             old_qty = move[0].product_uom_qty
             if quantity > 0:
-                move[0]._decrease_reserved_quanity(quantity)
-                move[0].with_context(do_not_unreserve=True).write({'product_uom_qty': quantity})
+                production = move[0].raw_material_production_id
+                production_qty = production.product_qty - production.qty_produced
+                move[0].write({'product_uom_qty': quantity})
                 move[0]._recompute_state()
                 move[0]._action_assign()
-                move[0].unit_factor = quantity / move[0].raw_material_production_id.product_qty
+                move[0].unit_factor = production_qty and (quantity - move[0].quantity_done) / production_qty or 1.0
                 return move[0], old_qty, quantity
             else:
                 if move[0].quantity_done > 0:
