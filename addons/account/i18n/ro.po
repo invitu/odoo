@@ -6,6 +6,7 @@
 # Sorin Trifu <sorin.trifu@bizconsulting.ro>, 2018
 # Martin Trigaux, 2019
 # Cozmin Candea <office@terrabit.ro>, 2020
+# Foldi Robert <foldirobert@nexterp.ro>, 2020
 # Dorin Hongu <dhongu@gmail.com>, 2020
 # 
 msgid ""
@@ -329,6 +330,9 @@ msgid ""
 "remove\" aria-label=\"Cancelled\" title=\"Cancelled\" role=\"img\"/><span "
 "class=\"d-none d-md-inline\"> Cancelled</span></span>"
 msgstr ""
+"<span class=\"badge badge-pill badge-warning\"><i class=\"fa fa-fw fa-"
+"remove\" aria-label=\"Anulat\" title=\"Anulat\" role=\"img\"/><span "
+"class=\"d-none d-md-inline\"> Anulat</span></span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
@@ -894,7 +898,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_chart_template
 msgid "Account Chart Template"
-msgstr ""
+msgstr "Modelul de grafic al contului"
 
 #. module: account
 #: model:ir.model,name:account.model_account_common_report
@@ -1003,7 +1007,7 @@ msgstr "Cont încasări"
 #. module: account
 #: model:ir.model,name:account.model_account_reconciliation_widget
 msgid "Account Reconciliation widget"
-msgstr ""
+msgstr "Widget de reconciliere al contului"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_account_template__account_src_id
@@ -1844,7 +1848,7 @@ msgstr "Etichetă analitic"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:193
 #, python-format
 msgid "Analytic Tags."
-msgstr ""
+msgstr "Etichete analitice."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_tax__account_analytic_id
@@ -4576,7 +4580,7 @@ msgstr "Referința externă"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:333
 #, python-format
 msgid "External link"
-msgstr ""
+msgstr "Link Extern"
 
 #. module: account
 #: model:account.incoterms,name:account.incoterm_FAS
@@ -4586,7 +4590,7 @@ msgstr ""
 #. module: account
 #: model:account.incoterms,name:account.incoterm_FCA
 msgid "FREE CARRIER"
-msgstr ""
+msgstr "Transport gratuit"
 
 #. module: account
 #: model:account.incoterms,name:account.incoterm_FOB
@@ -7830,7 +7834,7 @@ msgstr "Termeni de plată: 15 zile"
 #. module: account
 #: model:account.payment.term,note:account.account_payment_term_2months
 msgid "Payment terms: 2 Months"
-msgstr ""
+msgstr "Termeni de plată: 2 Luni"
 
 #. module: account
 #: model:account.payment.term,note:account.account_payment_term_net
@@ -9083,7 +9087,7 @@ msgstr "Trimiteți o factură pentru a testa portalul clienților."
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_sample_invoice_step
 msgid "Send sample"
-msgstr ""
+msgstr "Trimite eșantion"
 
 #. module: account
 #: selection:account.payment,state:0
@@ -9770,7 +9774,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "TaxCloud"
-msgstr ""
+msgstr "TaxCloud"
 
 #. module: account
 #: selection:account.account.tag,applicability:0
@@ -10307,6 +10311,7 @@ msgstr ""
 #, python-format
 msgid "The lock date for advisors is irreversible and can't be removed."
 msgstr ""
+"Data de blocare a consilierilor este ireversibilă și nu poate fi eliminată."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line__move_id
@@ -10324,6 +10329,8 @@ msgstr ""
 msgid ""
 "The new lock date for advisors must be set after the previous lock date."
 msgstr ""
+"Noua dată de blocare a consilierilor trebuie să fie stabilită după data "
+"anterioară de blocare."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal__refund_sequence_number_next
@@ -10789,7 +10796,7 @@ msgstr ""
 #: code:addons/account/static/src/xml/account_reconciliation.xml:299
 #, python-format
 msgid "This payment is registered but not reconciled."
-msgstr ""
+msgstr "Această plată este înregistrată dar nu este reconciliată"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_partner__property_supplier_payment_term_id
@@ -11757,6 +11764,9 @@ msgid ""
 "You cannot define stricter conditions on advisors than on users. Please make"
 " sure that the lock date on advisor is set before the lock date for users."
 msgstr ""
+"Nu puteți defini condiții mai stricte pentru consilieri decât pentru "
+"utilizatori. Vă rugăm să vă asigurați că data de blocare la consilier este "
+"setată înainte de data de blocare pentru utilizatori."
 
 #. module: account
 #: code:addons/account/models/account_payment.py:611
@@ -11832,6 +11842,9 @@ msgid ""
 "You cannot lock a period that is not finished yet. Please make sure that the"
 " lock date for advisors is not set after the last day of the previous month."
 msgstr ""
+"Nu puteți bloca o perioadă care nu este încă terminată. Vă rugăm să vă "
+"asigurați că data de blocare a consilierilor nu este stabilită după ultima "
+"zi a lunii precedente."
 
 #. module: account
 #. openerp-web
