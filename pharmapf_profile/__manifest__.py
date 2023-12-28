@@ -8,6 +8,7 @@
     'category': 'Customization',
     "author": "INVITU SARL",
     'website': 'https://www.invitu.com',
+    "license": "AGPL-3",
     'images': [
     ],
     'depends': [
@@ -21,7 +22,6 @@
     ],
     'qweb': [
     ],
-    'licence': 'AGPL-3',
     'installable': True,
     'application': False,
     'auto_install': False,
