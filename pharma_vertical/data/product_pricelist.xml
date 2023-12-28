@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo noupdate="1">
+    <record id="product_pricelist_ref" model="product.pricelist">
+        <field name="name">Reference</field>
+    </record>
     <record id="product_pricelist_ald" model="product.pricelist">
         <field name="name">ALD</field>
     </record>
