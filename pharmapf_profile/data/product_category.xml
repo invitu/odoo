@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="product_categ_smrb" model="product.category">
+        <field name="name">Médicaments SMR B</field>
+        <field name="complete_name">Médicaments classifiés SMRB</field>
+        <field name="parent_id" ref="product.product_category_1"/>
+        <field name="property_cost_method">average</field>
+        <field name="removal_strategy_id" ref="product_expiry.removal_fefo"/>
+    </record>
+    <record id="product_categ_smrc" model="product.category">
+        <field name="name">Médicaments SMR C</field>
+        <field name="complete_name">Médicaments classifiés SMRC</field>
+        <field name="parent_id" ref="product.product_category_1"/>
+        <field name="property_cost_method">average</field>
+        <field name="removal_strategy_id" ref="product_expiry.removal_fefo"/>
+    </record>
+    <record id="product_categ_homeo" model="product.category">
+        <field name="name">Médicaments Homeopathie</field>
+        <field name="complete_name">Médicaments classifiés Homeo</field>
+        <field name="parent_id" ref="product.product_category_1"/>
+        <field name="property_cost_method">average</field>
+        <field name="removal_strategy_id" ref="product_expiry.removal_fefo"/>
+    </record>
+    <record id="product_categ_lpp" model="product.category">
+        <field name="name">Médicaments LPP</field>
+        <field name="complete_name">Médicaments classifiés LPP</field>
+        <field name="parent_id" ref="product.product_category_1"/>
+        <field name="property_cost_method">average</field>
+        <field name="removal_strategy_id" ref="product_expiry.removal_fefo"/>
+    </record>
+</odoo>
