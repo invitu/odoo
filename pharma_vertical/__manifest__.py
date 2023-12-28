@@ -1,7 +1,7 @@
 {
-    'name': 'Pharma PF Profile',
+    'name': 'Pharma Vertical',
     'version': '1.0',
-    'summary': 'Verticalisation for Pharmacies in PF',
+    'summary': 'Verticalisation for Pharmacies',
     'sequence': 30,
     'description': """
 """,
@@ -12,10 +12,14 @@
     ],
     'depends': [
         'base',
-        'pharma_vertical',
+        'pos_partner_birthdate',
+        'pos_order_split_invoice',
+        'pos_multi_order_payment',
     ],
     'data': [
-        'data/res_partner.xml',
+        'data/res_config_settings.xml',
+        'data/product_category.xml',
+        'data/product_pricelist.xml',
     ],
     'demo': [
     ],
