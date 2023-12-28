@@ -18,9 +18,9 @@
         'pos_multi_order_payment',
     ],
     'data': [
-        'data/res_config_settings.xml',
         'data/product_category.xml',
         'data/product_pricelist.xml',
+        'data/res_config_settings.xml',
     ],
     'demo': [
     ],

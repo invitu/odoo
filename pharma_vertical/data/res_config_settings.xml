@@ -15,13 +15,16 @@
         <!--<field name="group_stock_multi_locations" eval="True"/>-->
         <!--<field name="group_stock_adv_location" eval="True"/>-->
         <!--<field name="pos_module_pos_discount" eval="True"/>-->
+        <field name="pos_manual_discount" eval="True"/>
         <field name="pos_use_pricelist" eval="True"/>
         <field name="pos_is_header_or_footer" eval="True"/>
         <!--<field name="point_of_sale_use_ticket_qr_code" eval="True"/>-->
         <!--<field name="point_of_sale_ticket_unique_code" eval="True"/>-->
         <field name="group_cash_rounding" eval="True"/>
         <field name="pos_only_round_cash_method" eval="True"/>
-        <!--<field name="pos_ship_later" eval="True"/>-->
+        <field name="pos_ship_later" eval="True"/>
+        <field name="barcode_nomenclature_id" ref="barcodes_gs1_nomenclature.default_gs1_nomenclature"/>
+        <field name="update_stock_quantities" eval="'real'"/>
         <!--<field name="website_sale_prevent_zero_price_sale" eval="True"/>-->
     </record>
 
