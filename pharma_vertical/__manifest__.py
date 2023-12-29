@@ -13,14 +13,16 @@
     ],
     'depends': [
         'base',
+        'product_expiry',
+        'purchase',
         'pos_partner_birthdate',
         'pos_order_split_invoice',
         'pos_multi_order_payment',
     ],
     'data': [
+        'data/res_config_settings.xml',
         'data/product_category.xml',
         'data/product_pricelist.xml',
-        'data/res_config_settings.xml',
     ],
     'demo': [
     ],

@@ -18,6 +18,7 @@
     'data': [
         'data/res_partner.xml',
         'data/product_pricelist.xml',
+        'data/res_config_settings.xml',
     ],
     'demo': [
     ],
