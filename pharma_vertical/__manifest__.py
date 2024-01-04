@@ -15,6 +15,7 @@
         'base',
         'product_expiry',
         'purchase',
+        'pos_partner_ref',
         'pos_partner_birthdate',
         'pos_order_split_invoice',
         'pos_multi_order_payment',
