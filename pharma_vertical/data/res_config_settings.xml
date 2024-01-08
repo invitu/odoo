@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <odoo noupdate="1">
     <record model="res.config.settings" id="res_config_settings_enable">
         <!--PRODUCT Settings-->
@@ -6,19 +6,22 @@
         <!--<field name="group_uom" eval="True"/>-->
         <!--<field name="group_stock_packaging" eval="True"/>-->
         <!--STOCK Settings-->
-        <field name="group_stock_production_lot" eval="True"/>
-        <field name="group_stock_lot_print_gs1" eval="True"/>
-        <field name="group_product_pricelist" eval="True"/>
-        <field name="group_sale_pricelist" eval="True"/>
-        <field name="product_pricelist_setting" eval="'advanced'"/>
+        <field name="group_stock_production_lot" eval="True" />
+        <field name="group_stock_lot_print_gs1" eval="True" />
+        <field name="group_product_pricelist" eval="True" />
+        <field name="group_sale_pricelist" eval="True" />
+        <field name="product_pricelist_setting" eval="'advanced'" />
         <!--POS Settings-->
-        <field name="pos_use_pricelist" eval="True"/>
-        <field name="pos_ship_later" eval="True"/>
-        <field name="barcode_nomenclature_id" ref="barcodes_gs1_nomenclature.default_gs1_nomenclature"/>
-        <field name="update_stock_quantities" eval="'real'"/>
+        <field name="pos_use_pricelist" eval="True" />
+        <field name="pos_ship_later" eval="True" />
+        <field
+            name="barcode_nomenclature_id"
+            ref="barcodes_gs1_nomenclature.default_gs1_nomenclature"
+        />
+        <field name="update_stock_quantities" eval="'real'" />
     </record>
 
     <function model="res.config.settings" name="execute">
-        <value eval="[ref('res_config_settings_enable')]"/>
+        <value eval="[ref('res_config_settings_enable')]" />
     </function>
 </odoo>
