@@ -1,29 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <odoo>
     <!-- Allow updating on noupdate=True records -->
     <function name="write" model="ir.model.data">
-        <value model="ir.model.data" search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_ald')]" />
+        <value
+            model="ir.model.data"
+            search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_ald')]"
+        />
         <value eval="{'noupdate': False}" />
     </function>
     <function name="write" model="ir.model.data">
-        <value model="ir.model.data" search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_tp')]" />
+        <value
+            model="ir.model.data"
+            search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_tp')]"
+        />
         <value eval="{'noupdate': False}" />
     </function>
 
     <!-- We force the data update -->
     <record id="pharma_vertical.product_pricelist_ald" model="product.pricelist">
-        <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps"/>
+        <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
     </record>
     <record id="pharma_vertical.product_pricelist_tp" model="product.pricelist">
-        <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps"/>
+        <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
     </record>
     <!-- Revoke noupdate change -->
     <function name="write" model="ir.model.data">
-        <value model="ir.model.data" search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_ald')]" />
+        <value
+            model="ir.model.data"
+            search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_ald')]"
+        />
         <value eval="{'noupdate': True}" />
     </function>
     <function name="write" model="ir.model.data">
-        <value model="ir.model.data" search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_tp')]" />
+        <value
+            model="ir.model.data"
+            search="[('module', '=', 'pharma_vertical'), ('name', '=', 'product_pricelist_tp')]"
+        />
         <value eval="{'noupdate': True}" />
     </function>
 </odoo>
