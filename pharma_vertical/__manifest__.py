@@ -10,10 +10,10 @@
     "images": [],
     "depends": [
         "base",
-        "product_expiry",
         "purchase",
+        "pos_product_expiry",
         "partner_second_lastname",  # to be replaced by pos_partner_second_lastname
-        "partner_firstname",  # to be replaced by pos_partner_firstname
+        "pos_partner_firstname",
         "partner_ref_unique",
         "pos_partner_ref",
         "pos_lot_selection",
