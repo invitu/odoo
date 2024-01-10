@@ -21,6 +21,7 @@
         "pos_partner_birthdate",
         "pos_order_split_invoice",
         "pos_multi_order_payment",
+        "pos_prescription",
     ],
     "data": [
         "data/res_config_settings.xml",
