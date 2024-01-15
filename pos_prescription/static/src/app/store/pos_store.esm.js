@@ -15,7 +15,7 @@ patch(PosStore.prototype, {
         }
         const currentPartner = currentOrder.get_prescriber();
         const {confirmed, payload: newPartner} = await this.showTempScreen(
-            "PartnerListScreen",
+            "PrescriptorListScreen",
             {
                 partner: currentPartner,
             }

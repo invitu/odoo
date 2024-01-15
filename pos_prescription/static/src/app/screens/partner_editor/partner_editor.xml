@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="PartnerDetailsEdit"
+        t-inherit="point_of_sale.PartnerDetailsEdit"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[hasclass('partner-details-box')]" position="inside">
+
+            <div class="partner-detail col">
+                <label
+                    class="form-label label"
+                    for="is_prescriptor"
+                >Is Prescriptor?</label>
+                <div>
+                    <CheckBox
+                        id="'is_prescriptor'"
+                        value="changes.is_prescriptor"
+                        className="'d-inline-block'"
+                        disabled="false"
+                        onChange.bind="(newValue) => {this.changes.is_prescriptor = newValue}"
+                    />
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

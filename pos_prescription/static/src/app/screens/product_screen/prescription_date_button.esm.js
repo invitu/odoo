@@ -10,8 +10,14 @@ import {_t} from "@web/core/l10n/translation";
 
 import {usePos} from "@point_of_sale/app/store/pos_hook";
 import {useService} from "@web/core/utils/hooks";
+const {DateTime} = luxon;
 
-export class PrescriptionDatePickerPopup extends DatePickerPopup {}
+export class PrescriptionDatePickerPopup extends DatePickerPopup {
+    _today() {
+        console.log(DateTime.now().toISODate());
+        return DateTime.now().toISODate();
+    }
+}
 PrescriptionDatePickerPopup.template = "pos_prescription.PrescriptionDatePickerPopup";
 
 export class PrescriptionDateButton extends Component {
@@ -20,7 +26,6 @@ export class PrescriptionDateButton extends Component {
 
         this.popup = useService("popup");
     }
-
     get date() {
         const order = this.pos.get_order();
         return order ? order.prescription_date : null;
@@ -37,6 +42,7 @@ export class PrescriptionDateButton extends Component {
                 }
             );
             if (confirmed) {
+                console.log(prescriptionDate);
                 this.pos.get_order().setPrescriptionDate(prescriptionDate);
             }
         }

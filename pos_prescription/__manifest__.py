@@ -11,6 +11,7 @@
     "website": "https://github.com/invitu/odoo-pharmapf",
     "depends": ["point_of_sale"],
     "data": [
+        "views/res_partner.xml",
         "views/pos_order.xml",
     ],
     "assets": {
