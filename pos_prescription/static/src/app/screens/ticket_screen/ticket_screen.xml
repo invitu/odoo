@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension">
+        <xpath
+            expr="//div[hasclass('orders')]//div[hasclass('header-row')]/div[4]"
+            position="after"
+        >
+            <div class="col p-2">Prescriptor</div>
+            <div class="col wide p-2">Prescription Date</div>
+        </xpath>
+        <xpath
+            expr="//div[hasclass('orders')]//div[hasclass('order-row')]/div[4]"
+            position="after"
+        >
+            <div class="col p-2"><div><t t-esc="getPrescriber(order)" /></div></div>
+            <div class="col wide p-2"><t t-esc="getPrescriptionDate(order)" /></div>
+        </xpath>
+    </t>
+</templates>

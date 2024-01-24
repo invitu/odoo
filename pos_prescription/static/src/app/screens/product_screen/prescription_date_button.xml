@@ -22,7 +22,7 @@
                 aria-label="Prescription Date"
                 title="Prescription Date"
             />
-            <t t-esc="this.date" t-if="this.date" />
+            <t t-esc="' ' + this.date" t-if="this.date" />
             <t t-else="">
                 Prescription Date
             </t>

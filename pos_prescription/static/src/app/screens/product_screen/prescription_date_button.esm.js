@@ -3,11 +3,11 @@
     Copyright 2024 Dixmit
     License OPL-1.0 or later (https://www.odoo.com/documentation/15.0/es/legal/licenses.html#odoo-apps).
 */
+import {deserializeDateTime, formatDate} from "@web/core/l10n/dates";
 import {Component} from "@odoo/owl";
 import {DatePickerPopup} from "@point_of_sale/app/utils/date_picker_popup/date_picker_popup";
 import {ProductScreen} from "@point_of_sale/app/screens/product_screen/product_screen";
 import {_t} from "@web/core/l10n/translation";
-
 import {usePos} from "@point_of_sale/app/store/pos_hook";
 import {useService} from "@web/core/utils/hooks";
 const {DateTime} = luxon;
@@ -15,6 +15,11 @@ const {DateTime} = luxon;
 export class PrescriptionDatePickerPopup extends DatePickerPopup {
     _today() {
         return DateTime.now().toISODate();
+    }
+    getPayload() {
+        return this.state.shippingDate > this._today()
+            ? this._today()
+            : this.state.shippingDate;
     }
 }
 PrescriptionDatePickerPopup.template = "pos_prescription.PrescriptionDatePickerPopup";
@@ -27,7 +32,9 @@ export class PrescriptionDateButton extends Component {
     }
     get date() {
         const order = this.pos.get_order();
-        return order ? order.prescription_date : null;
+        return order && order.prescription_date
+            ? formatDate(order.prescription_date)
+            : null;
     }
 
     async click() {
@@ -41,8 +48,9 @@ export class PrescriptionDateButton extends Component {
                 }
             );
             if (confirmed) {
-                console.log(prescriptionDate);
-                this.pos.get_order().setPrescriptionDate(prescriptionDate);
+                this.pos
+                    .get_order()
+                    .setPrescriptionDate(deserializeDateTime(prescriptionDate));
             }
         }
     }

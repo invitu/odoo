@@ -4,8 +4,9 @@
     Copyright 2024 Dixmit
     License OPL-1.0 or later (https://www.odoo.com/documentation/15.0/es/legal/licenses.html#odoo-apps).
 */
-import {Order} from "@point_of_sale/app/store/models";
+import {deserializeDateTime, serializeDateTime} from "@web/core/l10n/dates";
 
+import {Order} from "@point_of_sale/app/store/models";
 import {patch} from "@web/core/utils/patch";
 
 patch(Order.prototype, {
@@ -27,14 +28,14 @@ patch(Order.prototype, {
         }
         this.prescriber = partner;
         this.prescription_date = json.prescription_date
-            ? json.prescription_date
+            ? deserializeDateTime(json.prescription_date)
             : false;
     },
     export_as_JSON() {
         var json = super.export_as_JSON();
         json.prescriber_id = this.get_prescriber() ? this.get_prescriber().id : false;
         json.prescription_date = this.prescription_date
-            ? this.prescription_date
+            ? serializeDateTime(this.prescription_date)
             : false;
         return json;
     },
