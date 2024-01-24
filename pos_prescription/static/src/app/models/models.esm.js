@@ -2,7 +2,7 @@
 
 /*
     Copyright 2024 Dixmit
-    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+    License OPL-1.0 or later (https://www.odoo.com/documentation/15.0/es/legal/licenses.html#odoo-apps).
 */
 import {Order} from "@point_of_sale/app/store/models";
 
