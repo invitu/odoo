@@ -1,8 +1,6 @@
 # Copyright 2024 Dixmit
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-import pytz
-
 from odoo import api, fields, models
 
 
@@ -14,11 +12,10 @@ class PosOrder(models.Model):
 
     def _export_for_ui(self, order):
         result = super()._export_for_ui(order)
-        timezone = pytz.timezone(self._context.get("tz") or self.env.user.tz or "UTC")
         result.update(
             {
                 "prescription_date": order.prescription_date
-                and str(order.prescription_date.astimezone(timezone)),
+                and str(order.prescription_date),
                 "prescriber_id": order.prescriber_id.id,
             }
         )
