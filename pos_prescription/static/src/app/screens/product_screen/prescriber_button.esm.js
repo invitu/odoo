@@ -21,5 +21,5 @@ PrescriberButton.template = "pos_prescription.PrescriberButton";
 
 ProductScreen.addControlButton({
     component: PrescriberButton,
-    position: ["before", "SetFiscalPositionButton"],
+    position: ["after", "RefundButton"],
 });

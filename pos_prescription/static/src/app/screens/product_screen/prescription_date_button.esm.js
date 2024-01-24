@@ -14,7 +14,6 @@ const {DateTime} = luxon;
 
 export class PrescriptionDatePickerPopup extends DatePickerPopup {
     _today() {
-        console.log(DateTime.now().toISODate());
         return DateTime.now().toISODate();
     }
 }
@@ -52,4 +51,5 @@ PrescriptionDateButton.template = "pos_prescription.PrescriptionDateButton";
 
 ProductScreen.addControlButton({
     component: PrescriptionDateButton,
+    position: ["after", "PrescriberButton"],
 });
