@@ -28,6 +28,11 @@
         "data/product_category.xml",
         "data/product_pricelist.xml",
     ],
+    "assets": {
+        "point_of_sale._assets_pos": [
+            "pharma_vertical/static/src/models/order.esm.js",
+        ]
+    },
     "demo": [],
     "qweb": [],
     "installable": True,
