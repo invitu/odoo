@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Dixmit
+     License OPL-1.0 or later (https://www.odoo.com/documentation/15.0/es/legal/licenses.html#odoo-apps). -->
+<odoo>
+
+    <record model="ir.ui.view" id="pos_order_form_view">
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <group name="order_fields" position="inside">
+                <field name="prescription_date" />
+                <field name="prescriber_id" />
+            </group>
+        </field>
+    </record>
+
+
+
+</odoo>

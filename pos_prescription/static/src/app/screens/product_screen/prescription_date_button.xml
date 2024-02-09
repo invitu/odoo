@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="pos_prescription.PrescriptionDatePickerPopup"
+        t-inherit="point_of_sale.DatePickerPopup"
+        t-inherit-mode="primary"
+    >
+        <xpath expr="//input" position="attributes">
+            <attribute name="t-att-min" />
+            <attribute name="t-att-max">_today()</attribute>
+        </xpath>
+    </t>
+    <t t-name="pos_prescription.PrescriptionDateButton">
+        <div
+            class="control-button customer-button btn rounded-0 fw-bolder text-truncate"
+            t-attf-class="{{this.prescriber ? 'btn-primary' : 'btn-light'}}"
+            t-on-click="() => this.click()"
+        >
+            <i
+                class="fa fa-calendar"
+                role="img"
+                aria-label="Prescription Date"
+                title="Prescription Date"
+            />
+            <t t-esc="' ' + this.date" t-if="this.date" />
+            <t t-else="">
+                Prescription Date
+            </t>
+        </div>
+    </t>
+</templates>

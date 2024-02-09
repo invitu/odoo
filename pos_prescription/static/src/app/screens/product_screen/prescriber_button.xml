@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_prescription.PrescriberButton">
+        <div
+            class="control-button customer-button btn rounded-0 fw-bolder text-truncate"
+            t-attf-class="{{this.prescriber ? 'btn-primary' : 'btn-light'}}"
+            t-on-click="() => this.pos.selectPrescriber()"
+        >
+            <i
+                class="fa fa-user me-1"
+                role="img"
+                aria-label="Prescriber"
+                title="Prescriber"
+            />
+            <t t-esc="this.prescriber.name" t-if="this.prescriber" />
+            <t t-else="">
+                Prescription
+            </t>
+        </div>
+    </t>
+</templates>
