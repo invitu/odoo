@@ -12,7 +12,7 @@
         "base",
         "purchase",
         "pos_product_expiry",
-        "partner_second_lastname",  # to be replaced by pos_partner_second_lastname
+        "pos_partner_second_lastname",
         "pos_partner_firstname",
         "partner_ref_unique",
         "pos_partner_ref",
@@ -22,6 +22,9 @@
         "pos_order_split_invoice",
         "pos_multi_order_payment",
         "pos_prescription",
+        "pos_order_attachment",
+        "pos_split_invoice_partner_expiry_date",
+
     ],
     "data": [
         "data/res_config_settings.xml",
