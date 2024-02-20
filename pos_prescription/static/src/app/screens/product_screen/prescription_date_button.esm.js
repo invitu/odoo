@@ -33,7 +33,9 @@ export class PrescriptionDateButton extends Component {
     get date() {
         const order = this.pos.get_order();
         return order && order.prescription_date
-            ? formatDate(order.prescription_date)
+            ? formatDate(
+                  DateTime.fromJSDate(new Date(order.prescription_date)).setZone("UTC")
+              )
             : null;
     }
 
