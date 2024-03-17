@@ -16,6 +16,7 @@
         "data/res_partner.xml",
         "data/product_pricelist.xml",
         "data/res_config_settings.xml",
+        "views/product_views.xml",
     ],
     "demo": [],
     "qweb": [],
