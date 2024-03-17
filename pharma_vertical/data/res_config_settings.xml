@@ -7,6 +7,7 @@
         <!--<field name="group_stock_packaging" eval="True"/>-->
         <!--STOCK Settings-->
         <field name="group_stock_production_lot" eval="True" />
+        <field name="group_stock_multi_locations" eval="True" />
         <field name="group_stock_lot_print_gs1" eval="True" />
         <field name="group_product_pricelist" eval="True" />
         <field name="group_sale_pricelist" eval="True" />
