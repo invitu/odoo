@@ -38,4 +38,34 @@
         />
         <value eval="{'noupdate': True}" />
     </function>
+    <data noupdate="1">
+        <record id="product_pricelist_mat" model="product.pricelist">
+            <field name="name">Maternité</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+        <record id="product_pricelist_at" model="product.pricelist">
+            <field name="name">Arrêt de Travail</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+        <record id="product_pricelist_cc" model="product.pricelist">
+            <field name="name">Contraception</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+        <record id="product_pricelist_ccu" model="product.pricelist">
+            <field name="name">Contraception Urgent</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+        <record id="product_pricelist_115" model="product.pricelist">
+            <field name="name">ART 115</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+        <record id="product_pricelist_retr" model="product.pricelist">
+            <field name="name">Retraité 100%</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+        <record id="product_pricelist_app" model="product.pricelist">
+            <field name="name">Appareillage</field>
+            <field name="split_invoice_partner_id" ref="pharmapf_profile.l10n_pf_cps" />
+        </record>
+    </data>
 </odoo>
