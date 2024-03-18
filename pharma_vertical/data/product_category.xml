@@ -28,4 +28,11 @@
         <field name="property_cost_method">average</field>
         <field name="removal_strategy_id" ref="product_expiry.removal_fefo" />
     </record>
+    <record id="product_categ_contraceptif" model="product.category">
+        <field name="name">Médicaments Contraceptifs</field>
+        <field name="complete_name">Médicaments classifiés Contraceptifs</field>
+        <field name="parent_id" ref="product.product_category_1" />
+        <field name="property_cost_method">average</field>
+        <field name="removal_strategy_id" ref="product_expiry.removal_fefo" />
+    </record>
 </odoo>
