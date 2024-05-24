@@ -24,6 +24,7 @@
         "pos_prescription",
         "pos_order_attachment",
         "pos_split_invoice_partner_expiry_date",
+        "pos_order_split_invoice_medical",
 
     ],
     "data": [
